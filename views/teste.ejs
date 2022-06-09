@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 align="center">Lista de productos</h2>
+    
+  <div align="center">
+    <table>
+        <tr>
+          <th>Titulo</th>
+          <th>Precio</th>
+          
+        </tr>
+        <% productos.data.forEach(function(producto){%>
+        <tr>
+          
+            <td><%= producto.title%></td>
+            <td><%= producto.price%></td>
+           
+            <td><img src=<%= producto.thumbnail%> alt='login' style='width:20px; height:20px;'></td>
+
+         
+        </tr>
+        <%})%> 
+    </table>
+    <form action="http://127.0.0.1:8080/productos/pug">
+        <input type="submit" value="Ir a web con pug" />
+    </form>
+  </div>
+</body>
+</html>
